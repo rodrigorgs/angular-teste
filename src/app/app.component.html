@@ -1,3 +1,25 @@
+<div>
+  <!-- Lê propriedade title do componente -->
+  <input type="text" value="{{title}}">
+  <input type="text" [value]="title">
+  
+  <!-- Chama método do componente quando evento ocorre -->
+  <button (click)="cumprimenta()">Clique-me!</button>  
+</div>
+
+<div>
+  <!-- Nomeia elemento DOM como "meuinput" -->
+  <input type="text" [value]="title" #meuinput>
+  <!-- Passa valor do input como parâmetro -->
+  <button (click)="mudaTitulo(meuinput.value)">Muda</button>
+</div>
+
+<!-- Muda título à medida que digita -->
+<div>
+  <!-- $event.target é o elemento input -->
+  <input type="text" [value]="title" (keydown)="mudaTitulo($event.target.value)">
+</div>
+
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
