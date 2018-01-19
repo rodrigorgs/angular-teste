@@ -14,6 +14,7 @@ export class AppComponent {
   }
 
   atualizaNumeros(): void {
-    this.numeros = this.numeroService.getNumeros();
+    this.numeroService.getNumeros()
+      .then(x => this.numeros = x);
   }
 }
