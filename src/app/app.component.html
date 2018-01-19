@@ -1,3 +1,11 @@
+<p>Todos os números</p>
+<span *ngFor="let num of numeros">{{num}}, </span>
+
+<p>Números pares</p>
+<span *ngFor="let num of numeros">
+  <span *ngIf="num % 2 == 0">{{num}}, </span>
+</span>
+
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
