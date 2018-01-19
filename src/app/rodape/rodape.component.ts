@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-rodape',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rodape.component.css']
 })
 export class RodapeComponent implements OnInit {
+  @Input() nomedoapp = '';
 
   constructor() { }
 
